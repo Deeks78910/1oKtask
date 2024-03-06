@@ -9,13 +9,20 @@
 
 <body>
     <div
-        style="border: 2px solid black;width: 600px; height:300px; position: relative; left: 450px; background-color: rgb(244, 242, 233);top: 150px; ">
-        <div style="position: relative; left: 50px;">
+        style="border: 2px solid black;width: 750px; height:360px; position: relative; left: 400px; background-color: rgb(244, 242, 233);top: 150px; ">
+        <div style="position: relative; left:70px;">
+
+            <div style="position: relative;left: 20px;">
             <div class="question"
-                style="border: 1.5px solid black;width:300px; height:70px;margin:70px; padding-left: 50px; border-radius:99px;align-items: center;align-content: center;background-color: blanchedalmond;">
+                style="border: 1px solid black;width:450px; height:80px;margin:70px;  border-radius:99px;display: flex; justify-content:center; align-items: center; background-color: blanchedalmond;position:relative;right:20px; ">
             </div>
+
+            </div>
+            
+            
+            <div style="position: relative; left: 50px;">
             <div class="option"
-                style=" cursor: pointer;   border: 1px solid black; width: 150px; height:30px; border-radius: 20px;margin-top: -50px; margin-left: 50px; text-align: center; ">
+                style=" cursor: pointer; border: 1px solid black; width: 150px; height:30px; border-radius: 20px;margin-top: -50px; margin-left: 50px; text-align: center; ">
             </div>
             <div class="option"
                 style="   cursor: pointer; border: 1px solid black; width: 160px; height: 30px; border-radius: 20px; margin-left:270px;margin-top: -31px;text-align: center;">
@@ -26,16 +33,17 @@
             <div class="option"
                 style="  cursor: pointer; border: 1px solid black; width: 168px; height: 30px; border-radius:20px; margin-left: 270px;margin-top:-30px; text-align: center;">
             </div>
-            <button class="result" style=" cursor: pointer;  position: relative; left:220px;top: 20px;">Next</button>
+            </div>
+            <button class="result" style=" cursor: pointer;  position: relative; left:260px;top: 50px;">Next</button>
             <div
-                style="border: 1px solid black;border-radius: 50%;width: 30px;height:30px; position: relative; top: -20px;left: -20px;">
-                <span class="timer" style="position: relative;left: 10px; bottom: -9px; ">10</span>
+                style="border: 1px solid black;border-radius: 50%;width: 30px;height:30px; position: relative; top: 15px;left: -20px;">
+                <span class="timer" style="position: relative;left: 10px; bottom: -8px; ">10</span>
             </div>
         </div>
     </div>
     <script> questionsarray = [
 
-              "which INDIAN Captain won the  ICC Trophies in All Formates.",
+            "which INDIAN Captain won the  ICC Trophies in All Formates.",
             "who has fastest knockout in UFC history",
             "Who has score the 100 international Centuries",
             "who is Richest UFC fighter in the History",
@@ -45,7 +53,6 @@
             "2023 IPL winners",
             "PKL 9th Season winner",
             "which Team has won 5 Titles in IPL"
-
         ]
         opptionsarray = [
 
@@ -118,7 +125,7 @@
         questions[0].innerText = questionsarray[k];
 
         for (j = 0; j < opptionsarray[k].length; j++) {
-            options[j].innerText = opptionsarray[k][j];
+            options[j].innerHTML = `<span style="position:relative;top:7px">${opptionsarray[k][j]}</span>`;
         }
         var str = "";
         str += k;
